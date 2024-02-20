@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
 # # pconv - Periodic convolution, kernel origin at array origin
@@ -21,6 +21,7 @@
 # so h is padded with zero until the size of f. Supports complex images.
 
 # In[1]:
+
 
 def pconv(f,h):
     import numpy as np
@@ -65,11 +66,12 @@ def pconv(f,h):
 
 # In[1]:
 
+
 testing = (__name__ == '__main__')
 if testing:
     get_ipython().system(' jupyter nbconvert --to python pconv.ipynb')
     import numpy as np
-    get_ipython().magic('matplotlib inline')
+    get_ipython().run_line_magic('matplotlib', 'inline')
     import matplotlib.image as mpimg
     import matplotlib.pyplot as plt
     import sys,os
@@ -82,6 +84,7 @@ if testing:
 # ## Numerical Example 1D
 
 # In[2]:
+
 
 if testing: 
     f = np.array([0,0,0,1,0,0,0,0,1])
@@ -99,6 +102,7 @@ if testing:
 # ## Numerical Example 2D
 
 # In[4]:
+
 
 if testing:
     f = np.array([[1,0,0,0,0,0,0,0,0],
@@ -126,6 +130,7 @@ if testing:
 # ## Numerical Example 3D
 
 # In[5]:
+
 
 if testing:
     f = np.zeros((3,3,3))
@@ -157,6 +162,7 @@ if testing:
 # ## Example with Image 2D
 
 # In[6]:
+
 
 if testing:
     f = mpimg.imread('../data/cameraman.tif')

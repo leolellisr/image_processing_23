@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
 # # Table of Contents
@@ -22,6 +22,7 @@
 
 # In[2]:
 
+
 import numpy as np
 
 def cos(s, t, theta, phi):
@@ -40,6 +41,7 @@ def cos(s, t, theta, phi):
 
 # In[1]:
 
+
 testing = (__name__ == "__main__")
 if testing:
     get_ipython().system(' jupyter nbconvert --to python cos.ipynb')
@@ -54,6 +56,7 @@ if testing:
 # ### Example 1
 
 # In[2]:
+
 
 if testing:
 
@@ -84,6 +87,7 @@ if testing:
 
 # In[3]:
 
+
 if testing:
     print('testing cos')
     print(repr(np.floor(0.5 + 127*(ia.cos([7,10], 3, np.pi/4, 0)+1))) == repr(np.array(
@@ -97,6 +101,7 @@ if testing:
 
 
 # In[ ]:
+
 
 
 

@@ -1,4 +1,4 @@
-
+#!/usr/bin/env python
 # coding: utf-8
 
 # # Function conv
@@ -15,6 +15,7 @@
 #   - **h**: Image. PSF (point spread function), or kernel. The origin is at the array origin.
 
 # In[1]:
+
 
 import numpy as np
 
@@ -47,20 +48,18 @@ def conv(f, h):
 
 # In[1]:
 
+
 testing = (__name__ == "__main__")
 if testing:
     get_ipython().system(' jupyter nbconvert --to python conv.ipynb')
     import numpy as np
     import sys,os
-    ea979path = os.path.abspath('../../')
-    if ea979path not in sys.path:
-        sys.path.append(ea979path)
-    import ea979.src as ia
 
 
 # ### Example 1
 
 # In[2]:
+
 
 if testing:    
     f = np.zeros((5,5))
@@ -80,6 +79,7 @@ if testing:
 
 # In[3]:
 
+
 if testing:
     f = np.array([[1,0,0,0],
                   [0,0,0,0]])
@@ -94,13 +94,14 @@ if testing:
 
 # In[4]:
 
+
 if testing:
     f = np.array([[1,0,0,0,0,0],
                   [0,0,0,0,0,0]])
     print(f)
     h = np.array([1,2,3,4])
     print(h)
-    a = ia.conv(f,h)
+    a = conv(f,h)
     print(a)
 
 
@@ -108,8 +109,9 @@ if testing:
 
 # In[5]:
 
+
 if testing:
-    get_ipython().magic('matplotlib inline')
+    get_ipython().run_line_magic('matplotlib', 'inline')
     import matplotlib.pyplot as plt
     import matplotlib.image as mpimg
 
@@ -117,8 +119,8 @@ if testing:
     h = np.array([[ 1, 2, 1],
                   [ 0, 0, 0],
                   [-1,-2,-1]])
-    g = ia.conv(f,h)
-    gn = ia.normalize(g, [0,255])
+    g = conv(f,h)
+    gn = normalize(g, [0,255])
     ia.adshow(f,title='input')
     ia.adshow(gn,title='filtered')
 
@@ -146,6 +148,7 @@ if testing:
 
 # In[6]:
 
+
 if testing:
     print('testing conv')
     print(repr(ia.conv(np.array([[1,0,1,0],[0,0,0,0]]), np.array([1,2,3]))) == repr(np.array(
@@ -154,6 +157,7 @@ if testing:
 
 
 # In[ ]:
+
 
 
 
