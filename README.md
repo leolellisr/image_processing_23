@@ -1,0 +1,1 @@
+This repository was not made entirely from scratch. I'd like to give special thanks to @lrittner for the code in https://github.com/lrittner/Computacao-Visual and to @robertoalotufo for the code in  https://github.com/robertoalotufo/ia898
